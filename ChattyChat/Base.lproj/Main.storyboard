@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ToV-vR-2Wh">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,16 +32,19 @@
                                     <constraint firstAttribute="width" constant="70" id="krK-SK-j0d"/>
                                 </constraints>
                                 <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nhl-gk-wGb"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh8-uA-3aU">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivo-Cz-1iB">
                                 <rect key="frame" x="125" y="490" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="W45-qw-5Jl"/>
-                                    <constraint firstAttribute="width" constant="70" id="kBa-Db-4fk"/>
+                                    <constraint firstAttribute="width" constant="70" id="qsL-gQ-ez9"/>
+                                    <constraint firstAttribute="height" constant="70" id="yta-xt-Fir"/>
                                 </constraints>
-                                <state key="normal" image="createsnap_btn"/>
+                                <state key="normal" title="Button" image="createsnap_btn"/>
                                 <connections>
-                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tWE-2w-O8B"/>
+                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rPc-jR-wkG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,26 +52,173 @@
                         <constraints>
                             <constraint firstItem="ApQ-AV-NF0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6ca-Kh-bbs"/>
                             <constraint firstAttribute="trailing" secondItem="fB0-qI-LId" secondAttribute="trailing" id="BDo-er-0wv"/>
+                            <constraint firstItem="ivo-Cz-1iB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ecg-Yt-1e1"/>
                             <constraint firstAttribute="trailing" secondItem="ApQ-AV-NF0" secondAttribute="trailing" constant="8" id="KGs-Y2-S20"/>
                             <constraint firstItem="fB0-qI-LId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kur-bk-JY3"/>
-                            <constraint firstItem="Eh8-uA-3aU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W01-2H-ot2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eh8-uA-3aU" secondAttribute="bottom" constant="8" id="bJ7-6n-8zK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ivo-Cz-1iB" secondAttribute="bottom" constant="8" id="nnR-ez-0Qw"/>
                             <constraint firstItem="fB0-qI-LId" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oQ5-bP-7i6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fB0-qI-LId" secondAttribute="bottom" id="r6u-TM-ZBa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeCameraBtn" destination="ApQ-AV-NF0" id="f2p-KW-Dm4"/>
                         <outlet property="previewView" destination="fB0-qI-LId" id="A1D-jF-usN"/>
-                        <outlet property="recordBtn" destination="Eh8-uA-3aU" id="eFH-fp-8OJ"/>
+                        <outlet property="recordBtn" destination="ivo-Cz-1iB" id="DQk-Wb-QzQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="N52-uT-zgh">
+            <objects>
+                <viewController id="ToV-vR-2Wh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pYY-Yl-iJg"/>
+                        <viewControllerLayoutGuide type="bottom" id="MDk-my-czD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RKZ-Qj-9lr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-DI-1FM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-e5-Lny">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.27450980392156865" green="0.59215686274509804" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-fs-VPK">
+                                <rect key="frame" x="20" y="130" width="280" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-mountains-white" translatesAutoresizingMaskIntoConstraints="NO" id="LHf-m1-Ict">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Y99-pf-xPP"/>
+                                            <constraint firstAttribute="height" constant="64" id="s9P-aP-vah"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChattyChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dE-KB-Nhd">
+                                        <rect key="frame" x="100" y="0.0" width="180" height="60"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="31"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="A5I-qW-RIA"/>
+                                    <constraint firstAttribute="height" constant="60" id="cSL-Ah-xr8"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M14-rN-CLE" customClass="RoundTextField" customModule="ChattyChat" customModuleProvider="target">
+                                <rect key="frame" x="35" y="220" width="250" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1IV-pZ-FsJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="6iI-BG-ED4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="YJ1-Ru-vUJ"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3N-ZA-6uE" customClass="RoundTextField" customModule="ChattyChat" customModuleProvider="target">
+                                <rect key="frame" x="35" y="265" width="250" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="pc9-Ns-Ln5"/>
+                                    <constraint firstAttribute="height" constant="30" id="qz6-Cz-21n"/>
+                                    <constraint firstAttribute="width" constant="250" id="sMl-33-N1j"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj9-x5-EDd" customClass="RoundButton" customModule="ChattyChat" customModuleProvider="target">
+                                <rect key="frame" x="35" y="310" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="BOA-gh-dlb"/>
+                                    <constraint firstAttribute="height" constant="30" id="hmK-HQ-I4T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.55490851402282715" green="0.98146682977676392" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g3N-ZA-6uE" firstAttribute="centerX" secondItem="RKZ-Qj-9lr" secondAttribute="centerX" id="1sK-NG-Jbs"/>
+                            <constraint firstItem="qZF-fs-VPK" firstAttribute="top" secondItem="pYY-Yl-iJg" secondAttribute="bottom" constant="110" id="4oS-cj-40v"/>
+                            <constraint firstItem="M14-rN-CLE" firstAttribute="centerX" secondItem="RKZ-Qj-9lr" secondAttribute="centerX" id="6tN-L1-dm2"/>
+                            <constraint firstItem="hVr-e5-Lny" firstAttribute="top" secondItem="RKZ-Qj-9lr" secondAttribute="top" id="7Oq-wK-g3g"/>
+                            <constraint firstItem="qZF-fs-VPK" firstAttribute="centerX" secondItem="RKZ-Qj-9lr" secondAttribute="centerX" id="Fme-9U-xYA"/>
+                            <constraint firstItem="MDk-my-czD" firstAttribute="top" secondItem="hVr-e5-Lny" secondAttribute="bottom" id="Hbo-eF-KLA"/>
+                            <constraint firstItem="Coh-DI-1FM" firstAttribute="top" secondItem="RKZ-Qj-9lr" secondAttribute="top" id="OrU-UP-Xxn"/>
+                            <constraint firstItem="g3N-ZA-6uE" firstAttribute="top" secondItem="M14-rN-CLE" secondAttribute="bottom" constant="15" id="U20-ME-DM5"/>
+                            <constraint firstItem="Fj9-x5-EDd" firstAttribute="centerX" secondItem="RKZ-Qj-9lr" secondAttribute="centerX" id="XOD-Eh-pXd"/>
+                            <constraint firstItem="Coh-DI-1FM" firstAttribute="leading" secondItem="RKZ-Qj-9lr" secondAttribute="leading" id="h0q-XK-VmH"/>
+                            <constraint firstItem="M14-rN-CLE" firstAttribute="top" secondItem="qZF-fs-VPK" secondAttribute="bottom" constant="30" id="hjh-uo-Cy9"/>
+                            <constraint firstAttribute="trailing" secondItem="hVr-e5-Lny" secondAttribute="trailing" id="jGe-52-F1o"/>
+                            <constraint firstItem="hVr-e5-Lny" firstAttribute="leading" secondItem="RKZ-Qj-9lr" secondAttribute="leading" id="jRf-js-WE7"/>
+                            <constraint firstItem="MDk-my-czD" firstAttribute="top" secondItem="Coh-DI-1FM" secondAttribute="bottom" id="pH4-Vb-moI"/>
+                            <constraint firstAttribute="trailing" secondItem="Coh-DI-1FM" secondAttribute="trailing" id="qEg-mg-KVG"/>
+                            <constraint firstItem="Fj9-x5-EDd" firstAttribute="top" secondItem="g3N-ZA-6uE" secondAttribute="bottom" constant="15" id="vVv-Az-t7a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qX-b7-Tyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.625" y="38.028169014084504"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera_icon_snap" width="29" height="24"/>
         <image name="createsnap_btn" width="30" height="30"/>
+        <image name="devslopes" width="1080" height="1349"/>
+        <image name="devslopes-mountains-white" width="451" height="335"/>
     </resources>
 </document>
