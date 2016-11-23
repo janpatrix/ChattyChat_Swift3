@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CameraVC: CameraViewController, CameraVCDelegate {
 
@@ -22,6 +23,16 @@ class CameraVC: CameraViewController, CameraVCDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        guard FIRAuth.auth()?.currentUser != nil else {
+            
+            //Load login vc
+            performSegue(withIdentifier: "LoginVC", sender: nil)
+            return 
+        }
     }
     
     func shouldEnableRecordUI(enabled: Bool) {

@@ -15,6 +15,9 @@
 		01735D181DE303330015F3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01735D171DE303330015F3D0 /* GoogleService-Info.plist */; };
 		01735D1A1DE36DA20015F3D0 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01735D191DE36DA20015F3D0 /* RoundTextField.swift */; };
 		01735D1D1DE462990015F3D0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01735D1C1DE462990015F3D0 /* RoundButton.swift */; };
+		01735D1F1DE47CD10015F3D0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01735D1E1DE47CD10015F3D0 /* LoginVC.swift */; };
+		01735D221DE483500015F3D0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01735D211DE483500015F3D0 /* AuthService.swift */; };
+		01735D241DE5A7E20015F3D0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01735D231DE5A7E20015F3D0 /* DataService.swift */; };
 		01B2E5351DDFB4FD007CA939 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B2E5341DDFB4FD007CA939 /* CameraViewController.swift */; };
 		01B2E5391DDFB521007CA939 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B2E5381DDFB521007CA939 /* PhotoCaptureDelegate.swift */; };
 		01B2E53B1DDFB552007CA939 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B2E53A1DDFB552007CA939 /* PreviewView.swift */; };
@@ -33,6 +36,9 @@
 		01735D171DE303330015F3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01735D191DE36DA20015F3D0 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		01735D1C1DE462990015F3D0 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		01735D1E1DE47CD10015F3D0 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		01735D211DE483500015F3D0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		01735D231DE5A7E20015F3D0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		01B2E5341DDFB4FD007CA939 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		01B2E5381DDFB521007CA939 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		01B2E53A1DDFB552007CA939 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 		011A41CF1DDFB43C0022CF2B /* ChattyChat */ = {
 			isa = PBXGroup;
 			children = (
+				01735D201DE4833F0015F3D0 /* Services */,
 				01735D1B1DE36DB50015F3D0 /* Delegates */,
 				01B2E53C1DE1780A007CA939 /* Protocols */,
 				01B2E5371DDFB508007CA939 /* Controller */,
@@ -97,6 +104,15 @@
 			name = Delegates;
 			sourceTree = "<group>";
 		};
+		01735D201DE4833F0015F3D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01735D211DE483500015F3D0 /* AuthService.swift */,
+				01735D231DE5A7E20015F3D0 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		01B2E5361DDFB502007CA939 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 			children = (
 				011A41D21DDFB43C0022CF2B /* CameraVC.swift */,
 				01B2E5341DDFB4FD007CA939 /* CameraViewController.swift */,
+				01735D1E1DE47CD10015F3D0 /* LoginVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -271,7 +288,10 @@
 				011A41D31DDFB43C0022CF2B /* CameraVC.swift in Sources */,
 				011A41D11DDFB43C0022CF2B /* AppDelegate.swift in Sources */,
 				01735D1A1DE36DA20015F3D0 /* RoundTextField.swift in Sources */,
+				01735D241DE5A7E20015F3D0 /* DataService.swift in Sources */,
+				01735D1F1DE47CD10015F3D0 /* LoginVC.swift in Sources */,
 				01B2E5391DDFB521007CA939 /* PhotoCaptureDelegate.swift in Sources */,
+				01735D221DE483500015F3D0 /* AuthService.swift in Sources */,
 				01B2E53E1DE1783E007CA939 /* CameraVCDelegate.swift in Sources */,
 				01B2E5351DDFB4FD007CA939 /* CameraViewController.swift in Sources */,
 			);
